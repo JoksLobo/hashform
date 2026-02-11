@@ -11,6 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="styles.css" />
     <title>Projeto HashForms</title>
   </head>
   <body>
@@ -24,8 +25,8 @@
         />
       </div>
       <div class="boxes">
-        <section class="my-info">
-          <div class="box-1">
+        <div class="box-1">
+          <section class="my-info">
             <h2><i class="fa-regular fa-circle-user"></i> Meu Dados</h2>
             <p>Confirme seus dados. Eles aparecerão em sua nota fiscal.</p>
             <form action="#" id="myForm">
@@ -136,60 +137,60 @@
               </fieldset>
               <button type="submit">Enviar</button>
             </form>
-          </div>
-        </section>
-        <section class="summary">
-          <div class="box-2">
+          </section>
+        </div>
+
+        <div class="box-2">
+          <section class="summary">
             <h2><i class="fa-regular fa-file-lines"></i> Resumo</h2>
             <p>Black Friday - Lote 1: R$1.200,00</p>
             <p>Total: 12x de R$100,00 ou R$1.200,00 a vista</p>
-          </div>
-          <div class="aplly-discount">
-            <div class="aplly-discount-header">
-              <span>Aplicar cupom de desconto</span>
-              <i id="toogle-icon" class="fa-solid fa-chevron-down"></i>
+            <div class="aplly-discount">
+              <div class="aplly-discount-header">
+                <span>Aplicar cupom de desconto</span>
+                <i id="toogle-icon" class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="aplly-discount-body" id="aplly-discount-body">
+                <input
+                  type="text"
+                  id="discount-code"
+                  placeholder="digite o código de desconto"
+                />
+                <button type="button">Aplicar</button>
+                <span style="display: block; margin-top: 10px; color: green"
+                  >Desconto de 10%</span
+                >
+                <p id="total-price">Preço total: R$1.200,00</p>
+              </div>
             </div>
-            <div class="aplly-discount-body" id="aplly-discount-body">
-              <input
-                type="text"
-                id="discount-code"
-                placeholder="digite o código de desconto"
-              />
-              <button type="button">Aplicar</button>
-              <span style="display: block; margin-top: 10px; color: green"
-                >Desconto de 10%</span
-              >
-              <p id="total-price">Preço total: R$1.200,00</p>
+            <div class="icons">
+              <i class="fa-brands fa-cc-mastercard"></i>
+              <i class="fa-brands fa-cc-visa"></i>
+              <i class="fa-brands fa-cc-paypal"></i>
+              <i class="fa-brands fa-google-pay"></i>
+              <i class="fa-solid fa-barcode"></i>
             </div>
-          </div>
-          <div class="icons">
-            <i class="fa-brands fa-cc-mastercard"></i>
-            <i class="fa-brands fa-cc-visa"></i>
-            <i class="fa-brands fa-cc-paypal"></i>
-            <i class="fa-brands fa-google-pay"></i>
-            <i class="fa-solid fa-barcode"></i>
-          </div>
+            <div class="warranty">
+              <div class="warranty-box">
+                <h3>Você tem 15 dias de garantia</h3>
+                <p>
+                  Experimente! Se não gostar ou ver que não é para você,
+                  devolvemos o seu dinheiro. Sem letras miúdas.
+                </p>
+                <p class="safe">
+                  <i class="fa-regular fa-circle-check"></i
+                  ><strong>Suas informações estão seguras</strong>
+                </p>
 
-          <div class="warranty">
-            <div class="warranty-box">
-              <h3>Você tem 15 dias de garantia</h3>
-              <p>
-                Experimente! Se não gostar ou ver que não é para você,
-                devolvemos o seu dinheiro. Sem letras miúdas.
-              </p>
-              <p class="safe">
-                <i class="fa-regular fa-circle-check"></i
-                ><strong>Suas informações estão seguras</strong>
-              </p>
-
-              <img
-                src="./safe.jpg"
-                alt="carrinho de supermercado com logos de segurança"
-                width="300px"
-              />
+                <img
+                  src="./safe.jpg"
+                  alt="carrinho de supermercado com logos de segurança"
+                  width="300px"
+                />
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
       <footer>
         <p>
