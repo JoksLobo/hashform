@@ -169,8 +169,11 @@ input[type="number"]:focus {
 }
 
 .apply-discount-body {
-  /* display: none; */
+  display: none;
   margin-top: 10px;
+
+  flex-direction: column;
+  gap: 10px;
 
   input {
     width: 90%;
@@ -214,4 +217,18 @@ input[type="number"]:focus {
   width: 100%;
   max-width: 300px;
   border-radius: 10%;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+
+  a {
+    color: var(--text-realce);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
