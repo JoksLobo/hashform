@@ -232,3 +232,13 @@ footer {
     }
   }
 }
+
+@media (max-width: 900px) {
+  .boxes {
+    flex-direction: column;
+  }
+
+  .box-2 {
+    max-width: 100%;
+  }
+}
