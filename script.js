@@ -1,10 +1,3 @@
-// const myForm = document.getElementById("myForm");
-
-// myForm.addEventListener("submit", function (event) {
-//   event.preventDefault();
-//   alert("Formulario enviado com sucesso!");
-// });
-
 // função para verificar se o nome contèm apenas letras e espaços
 function isValidName(string) {
   for (let i = 0; i < string.length; i++) {
@@ -46,4 +39,60 @@ function isValidState(state) {
   );
 }
 
-console.log(isValidState("SP"));
+function validarEGuardarFormulario(event) {
+  event.preventDefault();
+  const nome = document.getElementById("name").value.trim();
+  const cpf = document.getElementById("cpf").value.trim();
+  const telefone = document.getElementById("phone").value.trim();
+  const cep = document.getElementById("cep").value.trim();
+  const rua = document.getElementById("adress").value.trim();
+  const numero = document.getElementById("number").value.trim();
+  const bairro = document.getElementById("bairro").value.trim();
+  const cidade = document.getElementById("city").value.trim();
+  const estado = document.getElementById("state").value.trim();
+  const complemento = document.getElementById("complement").value.trim();
+
+  if (
+    !nome ||
+    !cpf ||
+    !telefone ||
+    !cep ||
+    !rua ||
+    !numero ||
+    !bairro ||
+    !cidade ||
+    !estado ||
+    !complemento
+  ) {
+    alert("Por favor, preencha todos os campos.");
+    return;
+  }
+
+  if (!isValidName(nome)) {
+    alert("O nome deve conter apenas letras e espaços.");
+    return;
+  }
+
+  if (!isValidCpf(cpf)) {
+    alert("O CPF deve conter 11 dígitos numéricos.");
+    return;
+  }
+
+  if (!isValidPhone(telefone)) {
+    alert("O telefone deve conter 11 dígitos numéricos.");
+    return;
+  }
+
+  if (!isValidCep(cep)) {
+    alert("O CEP deve conter 8 dígitos numéricos.");
+    return;
+  }
+
+  if (!isValidState(estado)) {
+    alert("O estado deve conter 2 letras maiúsculas.");
+    return;
+  }
+}
+
+const form = document.getElementById("myForm");
+form.addEventListener("submit", validarEGuardarFormulario);
