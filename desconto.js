@@ -16,3 +16,41 @@ function toggleDiscount() {
     icon.classList.add("fa-chevron-down");
   }
 }
+
+const discountCupons = {
+  DESCONTO10: 0.1,
+  DESCONTO20: 0.2,
+  DESCONTO50: 0.5,
+};
+
+function applyDiscount() {
+  const discountCode = document
+    .getElementById("discount-code")
+    .value.trim()
+    .toUpperCase();
+
+  const discountMessageElement = document.getElementById("discount-message");
+  const totalPriceElement = document.getElementById("total-price");
+
+  // verifica se o cupom é válido
+  if (discountCupons[discountCode]) {
+    const discount = discountCupons[discountCode];
+    const originalPrice = 1200;
+    const discountedPrice = originalPrice * (1 - discount);
+
+    totalPriceElement.innerText = `Preço total: R$${discountedPrice.toFixed(
+      2,
+    )}`;
+
+    localStorage.setItem("discount", discountCode);
+
+    discountMessageElement.style.color = "green";
+
+    discountMessageElement.innerText = `Desconto de ${discount * 100}%`;
+
+    document.getElementById("discount-code").value = "";
+  } else {
+    discountMessageElement.style.color = "red";
+    discountMessageElement.innerText = "Cupom inválido";
+  }
+}

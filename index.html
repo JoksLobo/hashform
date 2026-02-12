@@ -156,10 +156,13 @@
                   id="discount-code"
                   placeholder="digite o código de desconto"
                 />
-                <button id="apply-btn" type="button">Aplicar</button>
-                <span style="display: block; margin-top: 10px; color: green"
-                  >Desconto de 10%</span
-                >
+                <button id="apply-btn" type="button" onclick="applyDiscount()">
+                  Aplicar
+                </button>
+                <span
+                  id="discount-message"
+                  style="display: block; margin-top: 10px; color: green"
+                ></span>
                 <p id="total-price">Preço total: R$1.200,00</p>
               </div>
             </div>
