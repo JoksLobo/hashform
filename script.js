@@ -1,3 +1,5 @@
+const form = document.getElementById("myForm");
+
 // função para verificar se o nome contèm apenas letras e espaços
 function isValidName(string) {
   for (let i = 0; i < string.length; i++) {
@@ -92,7 +94,22 @@ function validarEGuardarFormulario(event) {
     alert("O estado deve conter 2 letras maiúsculas.");
     return;
   }
+
+  const dadosFormulario = {
+    nome,
+    cpf,
+    telefone,
+    cep,
+    rua,
+    numero,
+    bairro,
+    cidade,
+    estado,
+    complemento,
+  };
+  localStorage.setItem("dadosFormulario", JSON.stringify(dadosFormulario));
+  form.reset();
+  alert("Dados Salvos com sucesso!");
 }
 
-const form = document.getElementById("myForm");
 form.addEventListener("submit", validarEGuardarFormulario);
