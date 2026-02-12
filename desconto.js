@@ -54,3 +54,16 @@ function applyDiscount() {
     discountMessageElement.innerText = "Cupom inválido";
   }
 }
+
+function checkStoreDiscounnt() {
+  const storedDiscount = localStorage.getItem("discount");
+  const discountMessageElement = document.getElementById("discount-message");
+
+  if (storedDiscount) {
+    localStorage.removeItem("discount");
+  }
+
+  discountMessageElement.innerText = "";
+}
+
+window.onload = checkStoreDiscounnt;
