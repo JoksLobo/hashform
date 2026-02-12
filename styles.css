@@ -136,6 +136,60 @@ input[type="number"]:focus {
 
 /* resumo */
 
+.summary,
+.warranty-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.warranty-box {
+  align-items: center;
+  border-top: 1px solid var(--input-border);
+  border-bottom: 1px solid var(--input-border);
+  padding: 15px 0;
+}
+
+.apply-discount {
+  border-top: 1px solid var(--input-border);
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.apply-discount-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-realce);
+
+  i {
+    font-size: 0.7em;
+  }
+}
+
+.apply-discount-body {
+  /* display: none; */
+  margin-top: 10px;
+
+  input {
+    width: 90%;
+    margin-right: 5px;
+  }
+}
+
+.icons {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  i {
+    font-size: 20px;
+  }
+}
+
 #apply-btn {
   background-color: var(--text-realce);
   color: var(--white);
@@ -150,4 +204,14 @@ input[type="number"]:focus {
 }
 #apply-btn:hover {
   background-color: var(--focus);
+}
+
+.safe {
+  color: var(--safe);
+}
+
+.safe-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10%;
 }
